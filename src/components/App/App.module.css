@@ -1,0 +1,14 @@
+.app {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+}
+
+.nameMessage{
+margin-top: 120px;
+font-size: 22px;
+color: #031a6b;
+}
+
+
+
