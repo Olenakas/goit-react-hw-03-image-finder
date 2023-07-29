@@ -75,6 +75,7 @@ export default class App extends React.Component {
 
   handleFormSubmit = requestPicture => {
     
+    
     this.setState({
       requestPicture,
       page: 1
@@ -103,19 +104,7 @@ export default class App extends React.Component {
       largeImage: '',
     });
   };
-
-  resetPage() {
-    this.setState({
-      page: 1,
-    });
-  }
-
-  resetData() {
-    this.setState({
-      pictureData: '',
-      IsLoadingMore: false,
-    });
-  }
+ 
 
 
   render() {

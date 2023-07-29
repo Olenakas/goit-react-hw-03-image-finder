@@ -19,6 +19,7 @@ export default class SearchBar extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    
     if (this.state.pictureName.trim() === '') {
       this.props.onError();
       return;
@@ -29,8 +30,8 @@ export default class SearchBar extends React.Component {
   render() {
     return (
       <div className={css.searchbarHeader}>
-        <form className={css.searchForm}>
-          <button className={css.searchFormButton} type="submit" onClick={this.handleSubmit}>
+        <form className={css.searchForm} onSubmit={this.handleSubmit}>
+          <button className={css.searchFormButton} type="submit" >
             <ImSearch className={css.icon} />
           </button>
           <input
