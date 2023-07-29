@@ -28,7 +28,11 @@ export default class App extends React.Component {
 
     if (prevSearch !== nextSearch) {
       this.loadPicture();
-      this.resetData();
+      
+      this.setState({
+        pictureData: '',
+        IsLoadingMore: false,
+      })
     }
 
     if (nextPage > prevPage) {
@@ -70,8 +74,11 @@ export default class App extends React.Component {
   };
 
   handleFormSubmit = requestPicture => {
-    this.resetPage();
-    this.setState({ requestPicture });
+    
+    this.setState({
+      requestPicture,
+      page: 1
+    });
   };
 
   handleSearchError = () => {
