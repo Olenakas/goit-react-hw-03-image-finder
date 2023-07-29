@@ -10,7 +10,7 @@ export default class SearchBar extends React.Component {
   };
 
   state = {
-    pictureName: '', // Здесь должно быть requestPicture вместо pictureName
+    pictureName: '', 
   };
 
   handleSearchChange = e => {
@@ -20,7 +20,7 @@ export default class SearchBar extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
     if (this.state.pictureName.trim() === '') {
-      this.props.onError(); // Исправлено на вызов props.onError()
+      this.props.onError();
       return;
     }
     this.props.onSubmit(this.state.pictureName);

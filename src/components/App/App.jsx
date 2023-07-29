@@ -73,16 +73,6 @@ export default class App extends React.Component {
     this.resetPage();
     this.setState({ requestPicture });
   };
-  
-  handleSubmit = e => {
-  e.preventDefault();
-  if (this.state.pictureName.trim() === '') {
-    this.props.onError();
-    return;
-    }
-    
-  this.props.onSubmit(this.state.pictureName);
-    };
 
   handleSearchError = () => {
     toast.error('Enter a search query');
